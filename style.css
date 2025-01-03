@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 20px;
+  overflow-x: auto;
+}
+
+th {
+  border: solid black;
+  padding: 10px;
+  background-color: hsl(34, 78%, 55%);
+}
+
+td {
+  border: solid black;
+  padding: 20px;
+}
+
+.course {
+  background-color: yellow;
+}
+
+.date {
+  background-color: rgb(20, 184, 20);
+}
+
+.time {
+  background-color: rgb(22, 152, 196);
+}
+
+td:hover:nth-child(even) {
+  background-color: white;
+}
+
+td:hover:nth-child(odd) {
+  background-color: black;
+  color: white;
+}
+
+button {
+  padding: 10px;
+  margin: auto 10px;
+}

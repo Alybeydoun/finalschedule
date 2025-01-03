@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Exam Schedule</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <table id="table">
+      <tr>
+        <th class="headers">Exams</th>
+        <th class="headers">Date</th>
+        <th class="headers">Time</th>
+      </tr>
+      <tr>
+        <td class="course">CENG507 - Embedded Systems</td>
+        <td class="date">Tuesday 14/1/2025</td>
+        <td class="time">2:00 PM</td>
+      </tr>
+      <tr>
+        <td class="course">EENG537 - Digital Communications</td>
+        <td class="date">Wednesday 15/1/2025</td>
+        <td class="time">2:00 PM</td>
+      </tr>
+      <tr>
+        <td class="course">EENG527 - Digital Signal Processing</td>
+        <td class="date">Friday 17/1/2025</td>
+        <td class="time">3:00 PM</td>
+      </tr>
+      <tr>
+        <td class="course">ENGG515 - Advanced Engineering Mathematics</td>
+        <td class="date">Wednesday 22/1/2025</td>
+        <td class="time">2:00 PM</td>
+      </tr>
+    </table>
+    <div>
+      <button id="button">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </body>
+
+  <script>
+    let isDarkMode = false;
+    const button = document.getElementById("button");
+    const body = document.querySelector("body");
+    const table = document.getElementById("table");
+    const headers = document.getElementsByClassName("headers");
+    const course = document.getElementsByClassName("course");
+    const date = document.getElementsByClassName("date");
+    const time = document.getElementsByClassName("time");
+    const toggleTheme = () => {
+      if (isDarkMode) {
+        body.style.backgroundColor = "white";
+        Array.from(headers).forEach((th) => {
+          th.style.backgroundColor = "hsl(34, 78%, 55%)";
+          th.style.color = "#000";
+          th.style.border = "solid black";
+        });
+        Array.from(course).forEach((td) => {
+          td.style.backgroundColor = "yellow";
+          td.style.color = "#000";
+          td.style.border = "solid black";
+        });
+        Array.from(date).forEach((td) => {
+          td.style.backgroundColor = "rgb(20, 184, 20)";
+          td.style.color = "#000";
+          td.style.border = "solid black";
+        });
+        Array.from(time).forEach((td) => {
+          td.style.backgroundColor = "rgb(22, 152, 196)";
+          td.style.color = "#000";
+          td.style.border = "solid black";
+        });
+      } else {
+        body.style.backgroundColor = "#121212";
+        Array.from(headers).forEach((th) => {
+          th.style.backgroundColor = "#212121";
+          th.style.color = "#ffffff";
+          th.style.border = "solid white";
+        });
+        Array.from(course).forEach((td) => {
+          td.style.backgroundColor = "#333333";
+          td.style.color = "#ffffff";
+          td.style.border = "solid white";
+        });
+        Array.from(date).forEach((td) => {
+          td.style.backgroundColor = "#333333";
+          td.style.color = "#ffffff";
+          td.style.border = "solid white";
+        });
+        Array.from(time).forEach((td) => {
+          td.style.backgroundColor = "#333333";
+          td.style.color = "#ffffff";
+          td.style.border = "solid white";
+        });
+      }
+      isDarkMode = !isDarkMode;
+    };
+    button.addEventListener("click", toggleTheme);
+    button.addEventListener("touchstart", toggleTheme);
+  </script>
+</html>
